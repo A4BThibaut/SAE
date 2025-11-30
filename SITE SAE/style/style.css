@@ -1,0 +1,125 @@
+/*Style d'écriture  */
+@font-face {
+    font-family: 'Basement';
+    src: url('../Font/basement-grotesque/BasementGrotesque-Black_v1.202.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'lora';
+    src: url('../Font/lora/Lora-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'playfaire';
+  src: url(/Font/playfair-display/PlayfairDisplay-Regular.ttf) format('truetype');
+}
+
+body {
+  background-color:#f8f4e6 ;
+  margin: 0;
+  padding-top: 70px;
+}
+
+.logo{
+  height: 60px;
+  position: sticky;
+}
+
+.sidebar {
+    position: fixed; 
+    top: 0;         
+    width: 100%;
+    background-color: #f8f4e6;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 70px; 
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+
+
+.bp_menu , menu {
+    background-color: #8bbd8b; 
+    color: black; 
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.content>div.img_background{
+  opacity: 90%;
+  width: 60%;
+}
+
+.content>div.img_background img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content>div.slogan{
+  width: 40%;
+}
+
+.slogan{
+  margin-left: 20px;
+  font-family: Lora;
+  color: #094820;
+}
+
+
+
+/* ===== STYLES POUR LA SIDEBAR DE NAVIGATION ===== */
+
+.nav-sidebar {
+      background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    position: fixed;
+    top: -500px; /* Cachée en haut */
+    justify-content: center;
+    width: auto;
+    height: 70px;
+    z-index: 3000;
+    transition: top 0.3s ease;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin-left: 570px;
+    margin-right: 225px;
+}
+
+.nav-sidebar.active {
+    top: 0; /* Apparait en haut */
+}
+
+
+
+.nav-sidebar nav {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 60px; 
+    background-color: #d1e7c9; 
+    border-radius: 30px; 
+}
+
+.nav-sidebar nav a {
+    text-decoration: none;
+    color: black;
+    padding: 8px 15px;
+}
